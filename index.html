@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>5H13 Business Solutions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Professional documents for everyone. Fast, simple tools for Quotes, P.O.s, DRs, Resumes, Portfolios, and more." />
+  <style>
+    :root {
+      --bg: #0b1020;
+      --bg-alt: #111729;
+      --accent: #3b82f6;
+      --accent-soft: #1d4ed8;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --border: #1f2937;
+      --danger: #ef4444;
+      --success: #22c55e;
+      --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background: radial-gradient(circle at top, #1f2937 0, #020617 55%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 32px 16px 48px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 32px;
+    }
+
+    .logo {
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    .nav {
+      display: flex;
+      gap: 16px;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .nav a {
+      padding: 4px 0;
+    }
+
+    .hero {
+      padding: 32px 24px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #020617, #0b1120);
+      border: 1px solid var(--border);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
+      margin-bottom: 32px;
+    }
+
+    .hero-title {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .hero-subtitle {
+      font-size: 1.05rem;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .hero-tagline {
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin-bottom: 24px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      border: 1px solid transparent;
+      cursor: pointer;
+      background: none;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent-soft));
+      border-color: transparent;
+      color: #f9fafb;
+      box-shadow: 0 12px 30px rgba(37, 99, 235, 0.45);
+    }
+
+    .btn-primary:hover {
+      text-decoration: none;
+      opacity: 0.95;
+    }
+
+    .btn-secondary {
+      border-color: var(--border);
+      background: rgba(15, 23, 42, 0.8);
+      color: var(--muted);
+    }
+
+    .btn-secondary:hover {
+      text-decoration: none;
+      color: var(--text);
+    }
+
+    .hero-meta {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .hero-meta strong {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.4fr);
+      gap: 24px;
+    }
+
+    section {
+      margin-bottom: 24px;
+      padding: 20px 18px;
+      border-radius: 16px;
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+    }
+
+    h2 {
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+    }
+
+    p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .pill {
+      font-size: 0.8rem;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      background: #020617;
+    }
+
+    .pill-accent {
+      border-color: var(--accent-soft);
+      color: #bfdbfe;
+      background: rgba(37, 99, 235, 0.12);
+    }
+
+    ul {
+      list-style: none;
+      margin-top: 6px;
+    }
+
+    li {
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    li::before {
+      content: "•";
+      color: var(--accent);
+      font-size: 0.9rem;
+    }
+
+    .columns {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 8px;
+    }
+
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 6px;
+    }
+
+    .badge {
+      font-size: 0.75rem;
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      color: var(--muted);
+    }
+
+    .badge-success {
+      border-color: var(--success);
+      color: #bbf7d0;
+    }
+
+    .badge-danger {
+      border-color: var(--danger);
+      color: #fecaca;
+    }
+
+    .pricing-tier {
+      margin-top: 8px;
+    }
+
+    .pricing-tier strong {
+      display: block;
+      font-size: 0.9rem;
+      margin-bottom: 2px;
+    }
+
+    footer {
+      margin-top: 32px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+      font-size: 0.8rem;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    footer span {
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      main {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
+
+      .hero {
+        padding: 24px 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="logo">
+        <span>5H13</span> Business Solutions
+      </div>
+      <nav class="nav">
+        <a href="https://5h13.netlify.app/">Home</a>
+        <a href="https://5h11.netlify.app/" target="_blank" rel="noopener">5H11 Hub</a>
+        <a href="https://5h13.github.io/CVmaker/" target="_blank" rel="noopener">CV Maker</a>
+        <a href="#documents">Documents</a>
+        <a href="#pricing">Pricing</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h1 class="hero-title">Professional documents for everyone.</h1>
+      <p class="hero-subtitle">
+        Fast, simple tools for Quotes, Purchase Orders, Delivery Receipts, Resumes, Portfolios, and more.
+      </p>
+      <p class="hero-tagline">
+        Built for workers. Trusted by businesses. Ready for the world.
+      </p>
+
+      <div class="hero-actions">
+        <a href="https://5h13.github.io/CVmaker/" class="btn btn-primary" target="_blank" rel="noopener">Start CV Maker</a>
+        <a href="https://5h11.netlify.app/" class="btn btn-secondary" target="_blank" rel="noopener">Visit 5H11 Project</a>
+      </div>
+
+      <p class="hero-meta">
+        <strong>PH-first</strong> — designed for technicians, skilled workers, fresh graduates, freelancers, and small businesses, with a global-ready experience.
+      </p>
+    </section>
+
+    <main>
+      <div>
+        <section id="documents">
+          <h2>What you can create</h2>
+          <p>
+            5H13 provides reliable document tools for everyday work and career needs. Everything is mobile-first, easy to use, and ready to export or send.
+          </p>
+
+          <div class="columns">
+            <div>
+              <h3>Business documents</h3>
+              <ul>
+                <li>Quotes</li>
+                <li>Purchase Orders (P.O.s)</li>
+                <li>Delivery Receipts (DRs)</li>
+                <li>Job sheets</li>
+                <li>Service reports</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Career documents</h3>
+              <ul>
+                <li>Resumes</li>
+                <li>Portfolios</li>
+                <li>Simple professional profiles</li>
+              </ul>
+            </div>
+          </div>
+
+          <p style="margin-top:8px;">
+            All templates follow clean, standard formats and consistent layouts, so your documents look professional anywhere.
+          </p>
+        </section>
+
+        <section id="why">
+          <h2>Why 5H13</h2>
+          <p>
+            5H13 is built as a business utility tool: clear, reliable, and focused on helping you work better.
+          </p>
+
+          <div class="columns">
+            <div>
+              <h3>Fast</h3>
+              <p>Create documents in minutes, not hours.</p>
+
+              <h3>Simple</h3>
+              <p>No complicated software. No learning curve.</p>
+
+              <h3>Reliable</h3>
+              <p>Standard formats that look professional anywhere.</p>
+            </div>
+            <div>
+              <h3>Mobile-first</h3>
+              <p>Works on any device — phone, tablet, or desktop.</p>
+
+              <h3>Accessible</h3>
+              <p>Free basic tools, with premium unlocks for only $1.</p>
+
+              <div class="badge-row">
+                <span class="badge badge-success">Technicians</span>
+                <span class="badge badge-success">Skilled workers</span>
+                <span class="badge badge-success">Fresh graduates</span>
+                <span class="badge">Freelancers</span>
+                <span class="badge">Small businesses</span>
+                <span class="badge">Global users</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>Built for real work</h2>
+          <p>
+            5H13 is designed for everyday users who need documents that “just work.”
+          </p>
+          <p>
+            Whether you’re sending a quote, preparing a P.O., delivering a job, or applying for your first role, 5H13 gives you tools that help you move forward.
+          </p>
+        </section>
+      </div>
+
+      <div>
+        <section>
+          <h2>Global-ready</h2>
+          <p>
+            Clear English. Clean layouts. Universal formats. Your documents will look professional in the Philippines — and everywhere else.
+          </p>
+
+          <div class="pill-row">
+            <span class="pill pill-accent">PH-first</span>
+            <span class="pill">Global-friendly</span>
+            <span class="pill">Neutral English</span>
+            <span class="pill">Standard formats</span>
+          </div>
+        </section>
+
+        <section>
+          <h2>How it works</h2>
+          <ul>
+            <li>Choose a document</li>
+            <li>Fill in your details</li>
+            <li>Customize the layout</li>
+            <li>Export or share instantly</li>
+          </ul>
+          <p style="margin-top:8px;">
+            No setup. No installation. No friction.
+          </p>
+        </section>
+
+        <section id="pricing">
+          <h2>Pricing</h2>
+          <p>
+            Simple, transparent pricing designed for mass-market and global users.
+          </p>
+
+          <div class="pricing-tier">
+            <strong>Free tier</strong>
+            <p>Access to basic templates and essential tools.</p>
+          </div>
+
+          <div class="pricing-tier">
+            <strong>Premium unlock — $1</strong>
+            <p>Advanced layouts, branding options, and additional export formats.</p>
+          </div>
+
+          <div class="badge-row">
+            <span class="badge badge-success">No hidden fees</span>
+            <span class="badge">No subscriptions</span>
+            <span class="badge badge-danger">No complicated plans</span>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <span>5H13 Business Solutions — Professional documents made simple.</span>
+      <span>© 2026 — PH-first, built for the world.</span>
+    </footer>
+  </div>
+</body>
+</html>
