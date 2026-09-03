@@ -383,8 +383,12 @@
 
     main {
       display: grid;
-      grid-template-columns: minmax(0, 2fr) minmax(0, 1.4fr);
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 24px;
+    }
+
+    main > div {
+      display: contents;
     }
 
     section {
@@ -559,6 +563,127 @@
     .pricing-subtext {
       font-size: 0.75rem;
       color: var(--muted);
+    }
+
+    .store-preview {
+      background: linear-gradient(145deg, rgba(255, 104, 0, 0.12), rgba(2, 6, 23, 0.92) 48%);
+      border-color: rgba(255, 142, 55, 0.35);
+    }
+
+    .store-kicker {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .store-kicker-label {
+      color: #ffb36b;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .store-window {
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 12px;
+      background: #f8fafc;
+      color: #172033;
+      box-shadow: 0 16px 28px rgba(0, 0, 0, 0.28);
+    }
+
+    .store-window-top {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 9px 12px;
+      background: #eef1f5;
+      border-bottom: 1px solid #dce1e8;
+    }
+
+    .store-window-top span {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #ff6b35;
+    }
+
+    .store-window-top span:nth-child(2) { background: #f7c948; }
+    .store-window-top span:nth-child(3) { background: #43b581; }
+
+    .store-profile {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 18px 14px 14px;
+      background: linear-gradient(115deg, #fff7ed, #ffffff);
+    }
+
+    .store-avatar {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      flex-shrink: 0;
+      border-radius: 10px;
+      background: #ff6801;
+      color: #ffffff;
+      font-size: 0.82rem;
+      font-weight: 800;
+      line-height: 1;
+      text-align: center;
+    }
+
+    .store-name {
+      margin-bottom: 2px;
+      color: #172033;
+      font-size: 0.94rem;
+      font-weight: 800;
+    }
+
+    .store-stats {
+      color: #687385;
+      font-size: 0.72rem;
+    }
+
+    .store-products {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+      padding: 0 12px 12px;
+    }
+
+    .store-product {
+      min-width: 0;
+      padding: 10px;
+      border: 1px solid #e1e6ed;
+      border-radius: 8px;
+      background: #ffffff;
+      color: #172033;
+      font-size: 0.75rem;
+      font-weight: 700;
+      line-height: 1.35;
+    }
+
+    .store-product:hover {
+      color: #d94f00;
+      border-color: #ffb36b;
+    }
+
+    .store-product-price {
+      display: block;
+      margin-top: 5px;
+      color: #e85d04;
+      font-size: 0.78rem;
+    }
+
+    .store-action {
+      width: 100%;
+      margin-top: 14px;
     }
 
     footer {
@@ -808,6 +933,48 @@
             <span class="pill">Neutral English</span>
             <span class="pill">Standard formats</span>
           </div>
+        </section>
+
+        <section id="store" class="store-preview">
+          <div class="store-kicker">
+            <span class="store-kicker-label">Marketplace partner</span>
+            <span class="badge badge-success">96% seller rating</span>
+          </div>
+          <h2>PiliAire HVACR Trading</h2>
+          <p>Browse HVACR parts, tools, and vehicle air-conditioning components from our Lazada storefront.</p>
+
+          <div class="store-window" aria-label="Preview of the PiliAire HVACR Trading Lazada store">
+            <div class="store-window-top" aria-hidden="true">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="store-profile">
+              <div class="store-avatar">PILI<br />AIRE</div>
+              <div>
+                <div class="store-name">PiliAire HVACR Trading</div>
+                <div class="store-stats">46 followers &middot; Philippines</div>
+              </div>
+            </div>
+            <div class="store-products">
+              <a class="store-product" href="https://www.lazada.com.ph/products/pdp-i4339237918-s24342801694.html" target="_blank" rel="noopener noreferrer">
+                Mitsubishi Expander Evaporator
+                <span class="store-product-price">₱2,200.00</span>
+              </a>
+              <a class="store-product" href="https://www.lazada.com.ph/products/pdp-i4718438991-s27291936746.html" target="_blank" rel="noopener noreferrer">
+                Motor Assembly
+                <span class="store-product-price">₱3,999.00</span>
+              </a>
+              <a class="store-product" href="https://www.lazada.com.ph/products/pdp-i4307418388-s24182888257.html" target="_blank" rel="noopener noreferrer">
+                Infrared Thermometer
+                <span class="store-product-price">₱1,700.00</span>
+              </a>
+              <a class="store-product" href="https://www.lazada.com.ph/products/pdp-i2523770957-s11642871034.html" target="_blank" rel="noopener noreferrer">
+                Front Evaporator
+                <span class="store-product-price">₱2,100.00</span>
+              </a>
+            </div>
+          </div>
+
+          <a class="btn btn-primary store-action" href="https://www.lazada.com.ph/shop/piliaire-hvacr-trading/" target="_blank" rel="noopener noreferrer">Visit PiliAire on Lazada</a>
         </section>
 
         <section>
