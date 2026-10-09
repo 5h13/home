@@ -62,7 +62,7 @@ window.SITE_DATA = {
       name: "5H13 QR Code Scanner",
       navLabel: "QR Scanner",
       description: "Scan QR codes right in your browser using your phone or laptop camera.",
-      url: "https://expo.dev/accounts/5h13/projects/qr-code-reader/builds/8faff282-3c6b-4a0a-84ff-ad6aebaa447e",                          // ← paste your QR scanner link here, e.g. "https://5h13.github.io/qr/"
+      url: "",                          // ← paste your QR scanner link here, e.g. "https://5h13.github.io/qr/"
       status: "free",
       category: "Utility tools",
       price: "Free",
@@ -76,7 +76,7 @@ window.SITE_DATA = {
       name: "5H11 Business Suite",
       navLabel: "Business Suite",
       description: "Our premium suite: advanced quotations, Purchase Orders (P.O.), Delivery Receipts (DR), and more business documents to come.",
-      url: "https://5h11.netlify.app/",
+      url: "https://5h13.vercel.app/",
       status: "premium",
       category: "Business tools",
       price: "₱60 / $1",
@@ -86,6 +86,20 @@ window.SITE_DATA = {
       showInPricing: true,
       featured: true,                   // highlighted card in Pricing
       buttonText: "Open Business Suite"
+    },
+    {
+      name: "Pera by 5H13",
+      navLabel: "Pera",
+      description: "Financial health, simplified. A money-learning app for kids, teens and adults. Works offline, with no accounts, pop-ups, tracking or ad networks. Your data stays on your phone.",
+      url: "https://5h13-pera.vercel.app/",
+      status: "new",
+      category: "Money learning",
+      price: "",
+      priceNote: "",
+      showInNav: true,
+      showInHero: false,
+      showInPricing: false,             // set to true once you decide Pera's price
+      buttonText: "Open Pera"
     },
     {
       name: "More business documents",
@@ -102,20 +116,38 @@ window.SITE_DATA = {
       buttonText: ""
     },
 
+  ],
+
+  /* ---------------------------------------------------------------------
+     SPONSORED LINKS — the "Sponsored" section. Edit like products:
+     copy one block { ... }, paste it, change the text, keep the comma.
+     image: optional picture in the assets folder (leave "" for none).
+     Set showSponsored to false to hide the whole section.
+     --------------------------------------------------------------------- */
+  showSponsored: true,
+  sponsored: [
+    {
+      name: "Ishabella HVACR Supplies",
+      description: "HVACR parts, tools and supplies for technicians and businesses.",
+      url: "https://www.facebook.com/ishabella2021",
+      image: "assets/ishabella-logo.jpg",
+      buttonText: "Visit Ishabella"
+    },
+    {
+      name: "Aton Aire Trading Corporation",
+      description: "Air-conditioning and refrigeration trading for homes and businesses.",
+      url: "https://www.facebook.com/aton.aire",
+      image: "assets/atonaire-logo.png",
+      buttonText: "Visit Aton Aire"
+    },
+
     /* --- EXAMPLE: remove the  /*  and  *\/  around this block to publish ---
     {
-      name: "Pera by 5H13",
-      navLabel: "Pera",
-      description: "Describe what Pera does in one or two sentences.",
-      url: "https://your-pera-link-here/",
-      status: "new",
-      category: "Finance tools",
-      price: "Free",
-      priceNote: "",
-      showInNav: true,
-      showInHero: false,
-      showInPricing: true,
-      buttonText: "Open Pera"
+      name: "Sponsor name",
+      description: "One or two sentences about the sponsor.",
+      url: "https://sponsor-link-here/",
+      image: "",
+      buttonText: "Learn more"
     },
     ----------------------------------------------------------------------- */
   ],

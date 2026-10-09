@@ -89,6 +89,25 @@
     ]));
   });
 
+  /* ---- Sponsored links ---- */
+  var sponsored = (data.sponsored || []).filter(function (s) { return s && s.url; });
+  if (data.showSponsored !== false && sponsored.length) {
+    byId('sponsored').hidden = false;
+    var sGrid = byId('sponsored-grid');
+    sponsored.forEach(function (s) {
+      var a = link(s.url, { className: 'sponsored-card' }, [
+        s.image ? el('img', { className: 'sponsored-img', src: s.image, alt: '' }) : null,
+        el('div', { className: 'sponsored-body' }, [
+          el('h3', { text: s.name }),
+          s.description ? el('p', { text: s.description }) : null,
+          el('span', { className: 'sponsored-cta', text: (s.buttonText || 'Learn more') + ' \u2192' })
+        ])
+      ]);
+      a.setAttribute('rel', 'sponsored noopener noreferrer');
+      sGrid.appendChild(a);
+    });
+  }
+
   /* ---- Partner bar ---- */
   var banner = byId('partners');
   (data.partners || []).forEach(function (partner) {
