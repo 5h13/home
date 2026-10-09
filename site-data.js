@@ -59,21 +59,21 @@ window.SITE_DATA = {
       buttonText: "Open CV Maker"
     },
     {
-      name: "5H13 QR Code Scanner",
-      navLabel: "QR Scanner",
-      description: "Scan QR codes right in your browser using your phone or laptop camera.",
-      url: "https://github.com/5h13/home/releases/download/QR-v1.0/5h13-qr-scanner.apk",                          // ← paste your QR scanner link here, e.g. "https://5h13.github.io/qr/"
+      name: "5H13 QR Scanner App",
+      navLabel: "QR Scanner App",
+      description: "A downloadable mobile app for Android. Scan QR codes fast with your phone camera. After downloading, open the file and allow \"Install unknown apps\" when your phone asks. Not available for iPhone.",
+      url: "https://github.com/5h13/home/releases/download/QR-v1.0/5h13-qr-scanner.apk",
       status: "free",
-      category: "Utility tools",
+      category: "Mobile app · Android",
       price: "Free",
-      priceNote: "",
+      priceNote: "Android app download",
       showInNav: true,
       showInHero: false,
       showInPricing: true,
-      buttonText: "Open QR Scanner"
+      buttonText: "Download for Android"
     },
     {
-      name: "5H11 Business Suite",
+      name: "5H13 Business Suite",
       navLabel: "Business Suite",
       description: "Our premium suite: advanced quotations, Purchase Orders (P.O.), Delivery Receipts (DR), and more business documents to come.",
       url: "https://5h13.vercel.app/",

@@ -85,7 +85,7 @@
       el('h3', { text: p.name }),
       el('div', { className: 'pricing-price', text: p.price || 'Free' }),
       p.priceNote ? el('div', { className: 'pricing-note', text: p.priceNote }) : null,
-      link(p.url, { className: 'btn btn-' + (p.featured ? 'primary' : 'secondary') + ' btn-small', text: p.status === 'premium' ? 'Get access' : 'Use it free' })
+      link(p.url, { className: 'btn btn-' + (p.featured ? 'primary' : 'secondary') + ' btn-small', text: /\.apk(\?|$)/i.test(p.url) ? 'Download free' : (p.status === 'premium' ? 'Get access' : 'Use it free') })
     ]));
   });
 
