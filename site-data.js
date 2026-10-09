@@ -62,7 +62,7 @@ window.SITE_DATA = {
       name: "5H13 QR Code Scanner",
       navLabel: "QR Scanner",
       description: "Scan QR codes right in your browser using your phone or laptop camera.",
-      url: "",                          // ← paste your QR scanner link here, e.g. "https://5h13.github.io/qr/"
+      url: "https://expo.dev/accounts/5h13/projects/qr-code-reader/builds/8faff282-3c6b-4a0a-84ff-ad6aebaa447e",                          // ← paste your QR scanner link here, e.g. "https://5h13.github.io/qr/"
       status: "free",
       category: "Utility tools",
       price: "Free",
