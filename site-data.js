@@ -140,7 +140,13 @@ window.SITE_DATA = {
       image: "assets/atonaire-logo.png",
       buttonText: "Visit Aton Aire"
     },
-
+    {
+      name: "Pili-Aire Aircon & Refrigeration Parts Trading",
+      description: "Car Aircon Parts, Air-conditioning and refrigeration Parts trading.",
+      url: "https://www.facebook.com/Pili.Aire",
+      image: "assets/piliaire-logo.png",
+      buttonText: "Visit Pili-Aire"
+    },
     /* --- EXAMPLE: remove the  /*  and  *\/  around this block to publish ---
     {
       name: "Sponsor name",
