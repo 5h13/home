@@ -123,6 +123,21 @@ window.SITE_DATA = {
       buttonText: "Open Pera"
     },
     {
+      name: "5H13 Studio",
+      navLabel: "Studio",
+      description: "Create square (1080×1080) product photos for online stores with background removal, plain-background colour removal, per-store logo overlays, box-label OCR, 5H13 brand stamps and backdrops, plus PNG export and sharing.",
+      url: "https://5h13.github.io/studio/",
+      gif: "assets/studio.gif",
+      status: "new",
+      category: "Product photo tools",
+      price: "Free",
+      priceNote: "Installable web app",
+      showInNav: true,
+      showInHero: true,
+      showInPricing: true,
+      buttonText: "Open 5H13 Studio"
+    },
+    {
       name: "More business documents",
       navLabel: "",
       description: "Job sheets, service reports, and portfolios are on the way.",
